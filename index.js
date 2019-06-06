@@ -2,7 +2,7 @@ const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const knexConfig = require("./knexfile");
-const db = require("");
+const db = require("./data/method");
 
 const server = express();
 server.use(express.json());
