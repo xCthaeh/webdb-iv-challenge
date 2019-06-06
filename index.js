@@ -9,6 +9,10 @@ server.use(express.json());
 server.use(helmet());
 server.use(morgan("dev"));
 
+server.get("/", (req, res) => {
+  res.send("API is running ...");
+});
+
 const port = 8000;
 server.listen(port, function() {
   console.log(`\n=== Web API Listening on http://localhost:${port} ===\n`);
